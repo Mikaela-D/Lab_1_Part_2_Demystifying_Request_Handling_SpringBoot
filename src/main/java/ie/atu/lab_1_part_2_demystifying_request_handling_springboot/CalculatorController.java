@@ -19,6 +19,9 @@ public class CalculatorController {
         else if("multiply".equals(calculation)) {
             result = a * b;
         }
-        return "Addition: " + result + "Subtraction " + result + "Multiplication: " + result;
+        else if("divide".equals(calculation)) {
+            result = a / b;
+        }
+        return "Addition: " + result + "Subtraction " + result + "Multiplication: " + result + "Division: " + result;
     }
 }
