@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class CalculatorController {
 
     @GetMapping("/calculate")
-    public Integer calculate(@RequestParam int a, @RequestParam  int b, @RequestParam int result) {
-
+    public String calculate(@RequestParam int a, @RequestParam  int b, @RequestParam String calculation) {
+        float result = 0;
+        if("add".equals(calculation)) {
+            result = a + b;
+        }
+        return "Addition: " + result;
     }
 }
