@@ -20,7 +20,12 @@ public class CalculatorController {
             result = a * b;
         }
         else if("divide".equals(calculation)) {
-            result = a / b;
+            if(b != 0) {
+                result = a / b;
+            }
+            else {
+                throw new IllegalArgumentException("It's not possible to divide by 0");
+            }
         }
         return "Addition: " + result + "Subtraction " + result + "Multiplication: " + result + "Division: " + result;
     }
