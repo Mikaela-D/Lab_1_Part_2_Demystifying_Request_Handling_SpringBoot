@@ -24,8 +24,11 @@ public class CalculatorController {
                 result = a / b;
             }
             else {
-                throw new IllegalArgumentException("It's not possible to divide by 0");
+                throw new IllegalArgumentException("Error. It's not possible to divide by 0");
             }
+        }
+        else {
+            throw new IllegalArgumentException("Error. Enter values in lowercase" + calculation);
         }
         return "Addition: " + result + "Subtraction " + result + "Multiplication: " + result + "Division: " + result;
     }
