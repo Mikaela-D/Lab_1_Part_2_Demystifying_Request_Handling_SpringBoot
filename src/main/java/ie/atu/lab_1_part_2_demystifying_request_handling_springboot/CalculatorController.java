@@ -13,6 +13,9 @@ public class CalculatorController {
         if("add".equals(calculation)) {
             result = a + b;
         }
-        return "Addition: " + result;
+        else if("subtract".equals(calculation)) {
+            result = a - b;
+        }
+        return "Addition: " + result + "Subtraction " + result;
     }
 }
